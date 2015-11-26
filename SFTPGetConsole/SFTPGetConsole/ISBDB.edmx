@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IBSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IBS.gImport.vw_importDownloadParameters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_importDownloadParameters">
+          <Key>
+            <PropertyRef Name="PK" />
+            <PropertyRef Name="gImportID" />
+            <PropertyRef Name="FK_downloadType" />
+          </Key>
+          <Property Name="PK" Type="int" Nullable="false" />
+          <Property Name="gImportID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="workingDir" Type="varchar" MaxLength="500" />
+          <Property Name="pgm" Type="varchar" MaxLength="50" />
+          <Property Name="arguments" Type="varchar" MaxLength="255" />
+          <Property Name="downFileFull" Type="varchar" MaxLength="8000" />
+          <Property Name="filePath" Type="varchar" MaxLength="100" />
+          <Property Name="ftpServer" Type="varchar" MaxLength="100" />
+          <Property Name="ftpUser" Type="varchar" MaxLength="100" />
+          <Property Name="ftpPass" Type="nvarchar" MaxLength="500" />
+          <Property Name="ftpSrcDir" Type="varchar" MaxLength="150" />
+          <Property Name="ftpSrcArchive" Type="varchar" MaxLength="150" />
+          <Property Name="deleteAfterDownload" Type="bit" />
+          <Property Name="passive" Type="bit" />
+          <Property Name="FK_downloadType" Type="int" Nullable="false" />
+          <Property Name="importID" Type="varchar" MaxLength="8" />
+          <Property Name="reqTracking" Type="bit" />
+          <Property Name="importOrder" Type="int" />
+          <Property Name="autoDownload" Type="bit" />
+          <Property Name="appendTimestamp" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="IBSModelStoreContainer">
+          <EntitySet Name="vw_importDownloadParameters" EntityType="Self.vw_importDownloadParameters" store:Type="Views" store:Schema="gImport">
+            <DefiningQuery>SELECT 
+[vw_importDownloadParameters].[PK] AS [PK], 
+[vw_importDownloadParameters].[gImportID] AS [gImportID], 
+[vw_importDownloadParameters].[workingDir] AS [workingDir], 
+[vw_importDownloadParameters].[pgm] AS [pgm], 
+[vw_importDownloadParameters].[arguments] AS [arguments], 
+[vw_importDownloadParameters].[downFileFull] AS [downFileFull], 
+[vw_importDownloadParameters].[filePath] AS [filePath], 
+[vw_importDownloadParameters].[ftpServer] AS [ftpServer], 
+[vw_importDownloadParameters].[ftpUser] AS [ftpUser], 
+[vw_importDownloadParameters].[ftpPass] AS [ftpPass], 
+[vw_importDownloadParameters].[ftpSrcDir] AS [ftpSrcDir], 
+[vw_importDownloadParameters].[ftpSrcArchive] AS [ftpSrcArchive], 
+[vw_importDownloadParameters].[deleteAfterDownload] AS [deleteAfterDownload], 
+[vw_importDownloadParameters].[passive] AS [passive], 
+[vw_importDownloadParameters].[FK_downloadType] AS [FK_downloadType], 
+[vw_importDownloadParameters].[importID] AS [importID], 
+[vw_importDownloadParameters].[reqTracking] AS [reqTracking], 
+[vw_importDownloadParameters].[importOrder] AS [importOrder], 
+[vw_importDownloadParameters].[autoDownload] AS [autoDownload], 
+[vw_importDownloadParameters].[appendTimestamp] AS [appendTimestamp]
+FROM [gImport].[vw_importDownloadParameters] AS [vw_importDownloadParameters]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IBSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="vw_importDownloadParameters">
+          <Key>
+            <PropertyRef Name="PK" />
+            <PropertyRef Name="gImportID" />
+            <PropertyRef Name="FK_downloadType" />
+          </Key>
+          <Property Name="PK" Type="Int32" Nullable="false" />
+          <Property Name="gImportID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="workingDir" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="pgm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="arguments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="downFileFull" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="filePath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ftpServer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ftpUser" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ftpPass" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ftpSrcDir" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ftpSrcArchive" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="deleteAfterDownload" Type="Boolean" />
+          <Property Name="passive" Type="Boolean" />
+          <Property Name="FK_downloadType" Type="Int32" Nullable="false" />
+          <Property Name="importID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="reqTracking" Type="Boolean" />
+          <Property Name="importOrder" Type="Int32" />
+          <Property Name="autoDownload" Type="Boolean" />
+          <Property Name="appendTimestamp" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="IBSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vw_importDownloadParameters" EntityType="Self.vw_importDownloadParameters" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IBSModelStoreContainer" CdmEntityContainer="IBSEntities">
+          <EntitySetMapping Name="vw_importDownloadParameters">
+            <EntityTypeMapping TypeName="IBSModel.vw_importDownloadParameters">
+              <MappingFragment StoreEntitySet="vw_importDownloadParameters">
+                <ScalarProperty Name="PK" ColumnName="PK" />
+                <ScalarProperty Name="gImportID" ColumnName="gImportID" />
+                <ScalarProperty Name="workingDir" ColumnName="workingDir" />
+                <ScalarProperty Name="pgm" ColumnName="pgm" />
+                <ScalarProperty Name="arguments" ColumnName="arguments" />
+                <ScalarProperty Name="downFileFull" ColumnName="downFileFull" />
+                <ScalarProperty Name="filePath" ColumnName="filePath" />
+                <ScalarProperty Name="ftpServer" ColumnName="ftpServer" />
+                <ScalarProperty Name="ftpUser" ColumnName="ftpUser" />
+                <ScalarProperty Name="ftpPass" ColumnName="ftpPass" />
+                <ScalarProperty Name="ftpSrcDir" ColumnName="ftpSrcDir" />
+                <ScalarProperty Name="ftpSrcArchive" ColumnName="ftpSrcArchive" />
+                <ScalarProperty Name="deleteAfterDownload" ColumnName="deleteAfterDownload" />
+                <ScalarProperty Name="passive" ColumnName="passive" />
+                <ScalarProperty Name="FK_downloadType" ColumnName="FK_downloadType" />
+                <ScalarProperty Name="importID" ColumnName="importID" />
+                <ScalarProperty Name="reqTracking" ColumnName="reqTracking" />
+                <ScalarProperty Name="importOrder" ColumnName="importOrder" />
+                <ScalarProperty Name="autoDownload" ColumnName="autoDownload" />
+                <ScalarProperty Name="appendTimestamp" ColumnName="appendTimestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

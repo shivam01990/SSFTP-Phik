@@ -6,3 +6,13 @@ D:\Development Area\SSFTP\SFTPGetConsole\SFTPGetConsole\bin\Debug\WinSCPnet.dll
 D:\Development Area\SSFTP\SFTPGetConsole\SFTPGetConsole\obj\Debug\SFTPGetConsole.csprojResolveAssemblyReference.cache
 D:\Development Area\SSFTP\SFTPGetConsole\SFTPGetConsole\obj\Debug\SFTPGetConsole.exe
 D:\Development Area\SSFTP\SFTPGetConsole\SFTPGetConsole\obj\Debug\SFTPGetConsole.pdb
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\bin\Debug\SFTPGetConsole.exe.config
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\obj\Debug\SFTPGetConsole.exe
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\obj\Debug\SFTPGetConsole.pdb
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\bin\Debug\WinSCP.exe
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\bin\Debug\SFTPGetConsole.exe
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\bin\Debug\SFTPGetConsole.pdb
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\bin\Debug\EntityFramework.dll
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\bin\Debug\WinSCPnet.dll
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\bin\Debug\EntityFramework.xml
+D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole\SFTPGetConsole\obj\Debug\SFTPGetConsole.csprojResolveAssemblyReference.cache

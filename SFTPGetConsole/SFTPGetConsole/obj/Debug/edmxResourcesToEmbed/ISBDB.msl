@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IBSModelStoreContainer" CdmEntityContainer="IBSEntities">
+    <EntitySetMapping Name="vw_importDownloadParameters">
+      <EntityTypeMapping TypeName="IBSModel.vw_importDownloadParameters">
+        <MappingFragment StoreEntitySet="vw_importDownloadParameters">
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="gImportID" ColumnName="gImportID" />
+          <ScalarProperty Name="workingDir" ColumnName="workingDir" />
+          <ScalarProperty Name="pgm" ColumnName="pgm" />
+          <ScalarProperty Name="arguments" ColumnName="arguments" />
+          <ScalarProperty Name="downFileFull" ColumnName="downFileFull" />
+          <ScalarProperty Name="filePath" ColumnName="filePath" />
+          <ScalarProperty Name="ftpServer" ColumnName="ftpServer" />
+          <ScalarProperty Name="ftpUser" ColumnName="ftpUser" />
+          <ScalarProperty Name="ftpPass" ColumnName="ftpPass" />
+          <ScalarProperty Name="ftpSrcDir" ColumnName="ftpSrcDir" />
+          <ScalarProperty Name="ftpSrcArchive" ColumnName="ftpSrcArchive" />
+          <ScalarProperty Name="deleteAfterDownload" ColumnName="deleteAfterDownload" />
+          <ScalarProperty Name="passive" ColumnName="passive" />
+          <ScalarProperty Name="FK_downloadType" ColumnName="FK_downloadType" />
+          <ScalarProperty Name="importID" ColumnName="importID" />
+          <ScalarProperty Name="reqTracking" ColumnName="reqTracking" />
+          <ScalarProperty Name="importOrder" ColumnName="importOrder" />
+          <ScalarProperty Name="autoDownload" ColumnName="autoDownload" />
+          <ScalarProperty Name="appendTimestamp" ColumnName="appendTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
