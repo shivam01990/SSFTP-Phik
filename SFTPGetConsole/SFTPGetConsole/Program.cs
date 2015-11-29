@@ -48,16 +48,16 @@ namespace SFTPGetConsole
                             string fileName = fileInfo.Name;
                             //string remotePath = ConfigurationManager.AppSettings["RemotePath"].ToString() + fileName;
                             string remotePath = item.filePath + fileName;
-                            // string localPath = "d:\\backup\\" + fileName;
-                            string localPath = ConfigurationManager.AppSettings["LocalPath"].ToString() + fileName;
 
+                            if (Directory.Exists(ConfigurationManager.AppSettings["LocalPath"].ToString() + "//" + item.gImportID))
+                            {
+                                Directory.CreateDirectory(ConfigurationManager.AppSettings["LocalPath"].ToString() + "//" + item.gImportID);
+                            }
+                            //Local Path
+                            string localPath = ConfigurationManager.AppSettings["LocalPath"].ToString() + "//" + item.gImportID + "//" + fileName;
+                            Helper.AddtoLogFile("Local Path " + localPath);
+                            Console.WriteLine("Local Path " + localPath);
 
-                            // Manual "remote to local" synchronization.
-
-                            // You can achieve the same using:
-                            // session.SynchronizeDirectories(
-                            //     SynchronizationMode.Local, localPath, remotePath, false, false, SynchronizationCriteria.Time, 
-                            //     new TransferOptions { FileMask = fileName }).Check();
                             if (session.FileExists(remotePath))
                             {
                                 bool download;
