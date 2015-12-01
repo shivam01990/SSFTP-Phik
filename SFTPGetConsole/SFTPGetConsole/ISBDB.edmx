@@ -4,16 +4,17 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="IBSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="IBSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
-warning 6002: The table/view 'IBS.gImport.vw_importDownloadParameters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="vw_importDownloadParameters">
+warning 6002: The table/view 'IBS.gImport.vw_importSFTP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_importSFTP">
           <Key>
             <PropertyRef Name="PK" />
             <PropertyRef Name="gImportID" />
             <PropertyRef Name="FK_downloadType" />
           </Key>
           <Property Name="PK" Type="int" Nullable="false" />
+          <Property Name="FolderName" Type="nvarchar" MaxLength="30" />
           <Property Name="gImportID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="workingDir" Type="varchar" MaxLength="500" />
           <Property Name="pgm" Type="varchar" MaxLength="50" />
@@ -35,44 +36,48 @@ warning 6002: The table/view 'IBS.gImport.vw_importDownloadParameters' does not 
           <Property Name="appendTimestamp" Type="bit" />
         </EntityType>
         <EntityContainer Name="IBSModelStoreContainer">
-          <EntitySet Name="vw_importDownloadParameters" EntityType="Self.vw_importDownloadParameters" store:Type="Views" store:Schema="gImport">
+          <EntitySet Name="vw_importSFTP" EntityType="Self.vw_importSFTP" store:Type="Views" store:Schema="gImport">
             <DefiningQuery>SELECT 
-[vw_importDownloadParameters].[PK] AS [PK], 
-[vw_importDownloadParameters].[gImportID] AS [gImportID], 
-[vw_importDownloadParameters].[workingDir] AS [workingDir], 
-[vw_importDownloadParameters].[pgm] AS [pgm], 
-[vw_importDownloadParameters].[arguments] AS [arguments], 
-[vw_importDownloadParameters].[downFileFull] AS [downFileFull], 
-[vw_importDownloadParameters].[filePath] AS [filePath], 
-[vw_importDownloadParameters].[ftpServer] AS [ftpServer], 
-[vw_importDownloadParameters].[ftpUser] AS [ftpUser], 
-[vw_importDownloadParameters].[ftpPass] AS [ftpPass], 
-[vw_importDownloadParameters].[ftpSrcDir] AS [ftpSrcDir], 
-[vw_importDownloadParameters].[ftpSrcArchive] AS [ftpSrcArchive], 
-[vw_importDownloadParameters].[deleteAfterDownload] AS [deleteAfterDownload], 
-[vw_importDownloadParameters].[passive] AS [passive], 
-[vw_importDownloadParameters].[FK_downloadType] AS [FK_downloadType], 
-[vw_importDownloadParameters].[importID] AS [importID], 
-[vw_importDownloadParameters].[reqTracking] AS [reqTracking], 
-[vw_importDownloadParameters].[importOrder] AS [importOrder], 
-[vw_importDownloadParameters].[autoDownload] AS [autoDownload], 
-[vw_importDownloadParameters].[appendTimestamp] AS [appendTimestamp]
-FROM [gImport].[vw_importDownloadParameters] AS [vw_importDownloadParameters]</DefiningQuery>
+[vw_importSFTP].[PK] AS [PK], 
+[vw_importSFTP].[FolderName] AS [FolderName], 
+[vw_importSFTP].[gImportID] AS [gImportID], 
+[vw_importSFTP].[workingDir] AS [workingDir], 
+[vw_importSFTP].[pgm] AS [pgm], 
+[vw_importSFTP].[arguments] AS [arguments], 
+[vw_importSFTP].[downFileFull] AS [downFileFull], 
+[vw_importSFTP].[filePath] AS [filePath], 
+[vw_importSFTP].[ftpServer] AS [ftpServer], 
+[vw_importSFTP].[ftpUser] AS [ftpUser], 
+[vw_importSFTP].[ftpPass] AS [ftpPass], 
+[vw_importSFTP].[ftpSrcDir] AS [ftpSrcDir], 
+[vw_importSFTP].[ftpSrcArchive] AS [ftpSrcArchive], 
+[vw_importSFTP].[deleteAfterDownload] AS [deleteAfterDownload], 
+[vw_importSFTP].[passive] AS [passive], 
+[vw_importSFTP].[FK_downloadType] AS [FK_downloadType], 
+[vw_importSFTP].[importID] AS [importID], 
+[vw_importSFTP].[reqTracking] AS [reqTracking], 
+[vw_importSFTP].[importOrder] AS [importOrder], 
+[vw_importSFTP].[autoDownload] AS [autoDownload], 
+[vw_importSFTP].[appendTimestamp] AS [appendTimestamp]
+FROM [gImport].[vw_importSFTP] AS [vw_importSFTP]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="IBSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="vw_importDownloadParameters">
+        <EntityContainer Name="IBSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vw_importSFTP" EntityType="IBSModel.vw_importSFTP" />
+        </EntityContainer>
+        <EntityType Name="vw_importSFTP">
           <Key>
             <PropertyRef Name="PK" />
             <PropertyRef Name="gImportID" />
             <PropertyRef Name="FK_downloadType" />
           </Key>
           <Property Name="PK" Type="Int32" Nullable="false" />
-          <Property Name="gImportID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FolderName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="gImportID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="workingDir" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="pgm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="arguments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
@@ -92,38 +97,36 @@ FROM [gImport].[vw_importDownloadParameters] AS [vw_importDownloadParameters]</D
           <Property Name="autoDownload" Type="Boolean" />
           <Property Name="appendTimestamp" Type="Boolean" />
         </EntityType>
-        <EntityContainer Name="IBSEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="vw_importDownloadParameters" EntityType="Self.vw_importDownloadParameters" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="IBSModelStoreContainer" CdmEntityContainer="IBSEntities">
-          <EntitySetMapping Name="vw_importDownloadParameters">
-            <EntityTypeMapping TypeName="IBSModel.vw_importDownloadParameters">
-              <MappingFragment StoreEntitySet="vw_importDownloadParameters">
-                <ScalarProperty Name="PK" ColumnName="PK" />
-                <ScalarProperty Name="gImportID" ColumnName="gImportID" />
-                <ScalarProperty Name="workingDir" ColumnName="workingDir" />
-                <ScalarProperty Name="pgm" ColumnName="pgm" />
-                <ScalarProperty Name="arguments" ColumnName="arguments" />
-                <ScalarProperty Name="downFileFull" ColumnName="downFileFull" />
-                <ScalarProperty Name="filePath" ColumnName="filePath" />
-                <ScalarProperty Name="ftpServer" ColumnName="ftpServer" />
-                <ScalarProperty Name="ftpUser" ColumnName="ftpUser" />
-                <ScalarProperty Name="ftpPass" ColumnName="ftpPass" />
-                <ScalarProperty Name="ftpSrcDir" ColumnName="ftpSrcDir" />
-                <ScalarProperty Name="ftpSrcArchive" ColumnName="ftpSrcArchive" />
-                <ScalarProperty Name="deleteAfterDownload" ColumnName="deleteAfterDownload" />
-                <ScalarProperty Name="passive" ColumnName="passive" />
-                <ScalarProperty Name="FK_downloadType" ColumnName="FK_downloadType" />
-                <ScalarProperty Name="importID" ColumnName="importID" />
-                <ScalarProperty Name="reqTracking" ColumnName="reqTracking" />
-                <ScalarProperty Name="importOrder" ColumnName="importOrder" />
-                <ScalarProperty Name="autoDownload" ColumnName="autoDownload" />
+          <EntitySetMapping Name="vw_importSFTP">
+            <EntityTypeMapping TypeName="IBSModel.vw_importSFTP">
+              <MappingFragment StoreEntitySet="vw_importSFTP">
                 <ScalarProperty Name="appendTimestamp" ColumnName="appendTimestamp" />
+                <ScalarProperty Name="autoDownload" ColumnName="autoDownload" />
+                <ScalarProperty Name="importOrder" ColumnName="importOrder" />
+                <ScalarProperty Name="reqTracking" ColumnName="reqTracking" />
+                <ScalarProperty Name="importID" ColumnName="importID" />
+                <ScalarProperty Name="FK_downloadType" ColumnName="FK_downloadType" />
+                <ScalarProperty Name="passive" ColumnName="passive" />
+                <ScalarProperty Name="deleteAfterDownload" ColumnName="deleteAfterDownload" />
+                <ScalarProperty Name="ftpSrcArchive" ColumnName="ftpSrcArchive" />
+                <ScalarProperty Name="ftpSrcDir" ColumnName="ftpSrcDir" />
+                <ScalarProperty Name="ftpPass" ColumnName="ftpPass" />
+                <ScalarProperty Name="ftpUser" ColumnName="ftpUser" />
+                <ScalarProperty Name="ftpServer" ColumnName="ftpServer" />
+                <ScalarProperty Name="filePath" ColumnName="filePath" />
+                <ScalarProperty Name="downFileFull" ColumnName="downFileFull" />
+                <ScalarProperty Name="arguments" ColumnName="arguments" />
+                <ScalarProperty Name="pgm" ColumnName="pgm" />
+                <ScalarProperty Name="workingDir" ColumnName="workingDir" />
+                <ScalarProperty Name="gImportID" ColumnName="gImportID" />
+                <ScalarProperty Name="FolderName" ColumnName="FolderName" />
+                <ScalarProperty Name="PK" ColumnName="PK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

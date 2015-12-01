@@ -12,9 +12,10 @@ namespace SFTPGetConsole
     using System;
     using System.Collections.Generic;
     
-    public partial class vw_importDownloadParameters
+    public partial class vw_importSFTP
     {
         public int PK { get; set; }
+        public string FolderName { get; set; }
         public string gImportID { get; set; }
         public string workingDir { get; set; }
         public string pgm { get; set; }

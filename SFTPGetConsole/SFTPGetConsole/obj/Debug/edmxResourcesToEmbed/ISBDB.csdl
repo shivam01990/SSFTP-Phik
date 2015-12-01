@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="IBSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="vw_importDownloadParameters">
+  <EntityContainer Name="IBSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="vw_importSFTP" EntityType="IBSModel.vw_importSFTP" />
+  </EntityContainer>
+  <EntityType Name="vw_importSFTP">
     <Key>
       <PropertyRef Name="PK" />
       <PropertyRef Name="gImportID" />
       <PropertyRef Name="FK_downloadType" />
     </Key>
     <Property Name="PK" Type="Int32" Nullable="false" />
-    <Property Name="gImportID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FolderName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="gImportID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="workingDir" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="pgm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="arguments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
@@ -27,7 +31,4 @@
     <Property Name="autoDownload" Type="Boolean" />
     <Property Name="appendTimestamp" Type="Boolean" />
   </EntityType>
-  <EntityContainer Name="IBSEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="vw_importDownloadParameters" EntityType="Self.vw_importDownloadParameters" />
-  </EntityContainer>
 </Schema>

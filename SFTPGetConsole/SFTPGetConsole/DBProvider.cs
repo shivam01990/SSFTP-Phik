@@ -13,12 +13,12 @@ namespace SFTPGetConsole
         #endregion
 
         #region--Download Parameters--
-        public List<vw_importDownloadParameters> DownloadParameters()
+        public List<vw_importSFTP> DownloadParameters()
         {
-            List<vw_importDownloadParameters> rType = new List<vw_importDownloadParameters>();
+            List<vw_importSFTP> rType = new List<vw_importSFTP>();
             using (IBSEntities db = new IBSEntities())
             {
-                rType = db.vw_importDownloadParameters.ToList();
+                rType = db.vw_importSFTP.ToList();
             }
             return rType;
         }

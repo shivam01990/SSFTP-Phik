@@ -71,12 +71,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="vw_importDownloadParameters.cs">
+    <Compile Include="vw_importSFTP.cs">
       <DependentUpon>ISBDB.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="ISBDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ISBDB.Designer.cs</LastGenOutput>

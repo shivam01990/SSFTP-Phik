@@ -25,6 +25,6 @@ namespace SFTPGetConsole
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<vw_importDownloadParameters> vw_importDownloadParameters { get; set; }
+        public DbSet<vw_importSFTP> vw_importSFTP { get; set; }
     }
 }
