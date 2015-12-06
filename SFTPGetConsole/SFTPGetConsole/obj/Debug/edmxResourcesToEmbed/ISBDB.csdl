@@ -1,34 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="IBSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="IBSEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="vw_importSFTP" EntityType="IBSModel.vw_importSFTP" />
+    <EntitySet Name="SFTPmaps" EntityType="IBSModel.SFTPmap" />
   </EntityContainer>
-  <EntityType Name="vw_importSFTP">
+  <EntityType Name="SFTPmap">
     <Key>
-      <PropertyRef Name="PK" />
-      <PropertyRef Name="gImportID" />
-      <PropertyRef Name="FK_downloadType" />
+      <PropertyRef Name="Id" />
     </Key>
-    <Property Name="PK" Type="Int32" Nullable="false" />
-    <Property Name="FolderName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="gImportID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="workingDir" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-    <Property Name="pgm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="arguments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="downFileFull" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
-    <Property Name="filePath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ftpServer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ftpUser" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ftpPass" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="ftpSrcDir" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="ftpSrcArchive" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="deleteAfterDownload" Type="Boolean" />
-    <Property Name="passive" Type="Boolean" />
-    <Property Name="FK_downloadType" Type="Int32" Nullable="false" />
-    <Property Name="importID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
-    <Property Name="reqTracking" Type="Boolean" />
-    <Property Name="importOrder" Type="Int32" />
-    <Property Name="autoDownload" Type="Boolean" />
-    <Property Name="appendTimestamp" Type="Boolean" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FolderName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FilePath" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

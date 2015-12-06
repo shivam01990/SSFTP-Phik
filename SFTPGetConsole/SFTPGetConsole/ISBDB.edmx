@@ -5,97 +5,31 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="IBSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'IBS.gImport.vw_importSFTP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="vw_importSFTP">
+        <EntityType Name="SFTPmaps">
           <Key>
-            <PropertyRef Name="PK" />
-            <PropertyRef Name="gImportID" />
-            <PropertyRef Name="FK_downloadType" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="PK" Type="int" Nullable="false" />
-          <Property Name="FolderName" Type="nvarchar" MaxLength="30" />
-          <Property Name="gImportID" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="workingDir" Type="varchar" MaxLength="500" />
-          <Property Name="pgm" Type="varchar" MaxLength="50" />
-          <Property Name="arguments" Type="varchar" MaxLength="255" />
-          <Property Name="downFileFull" Type="varchar" MaxLength="8000" />
-          <Property Name="filePath" Type="varchar" MaxLength="100" />
-          <Property Name="ftpServer" Type="varchar" MaxLength="100" />
-          <Property Name="ftpUser" Type="varchar" MaxLength="100" />
-          <Property Name="ftpPass" Type="nvarchar" MaxLength="500" />
-          <Property Name="ftpSrcDir" Type="varchar" MaxLength="150" />
-          <Property Name="ftpSrcArchive" Type="varchar" MaxLength="150" />
-          <Property Name="deleteAfterDownload" Type="bit" />
-          <Property Name="passive" Type="bit" />
-          <Property Name="FK_downloadType" Type="int" Nullable="false" />
-          <Property Name="importID" Type="varchar" MaxLength="8" />
-          <Property Name="reqTracking" Type="bit" />
-          <Property Name="importOrder" Type="int" />
-          <Property Name="autoDownload" Type="bit" />
-          <Property Name="appendTimestamp" Type="bit" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FolderName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FilePath" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityContainer Name="IBSModelStoreContainer">
-          <EntitySet Name="vw_importSFTP" EntityType="Self.vw_importSFTP" store:Type="Views" store:Schema="gImport">
-            <DefiningQuery>SELECT 
-[vw_importSFTP].[PK] AS [PK], 
-[vw_importSFTP].[FolderName] AS [FolderName], 
-[vw_importSFTP].[gImportID] AS [gImportID], 
-[vw_importSFTP].[workingDir] AS [workingDir], 
-[vw_importSFTP].[pgm] AS [pgm], 
-[vw_importSFTP].[arguments] AS [arguments], 
-[vw_importSFTP].[downFileFull] AS [downFileFull], 
-[vw_importSFTP].[filePath] AS [filePath], 
-[vw_importSFTP].[ftpServer] AS [ftpServer], 
-[vw_importSFTP].[ftpUser] AS [ftpUser], 
-[vw_importSFTP].[ftpPass] AS [ftpPass], 
-[vw_importSFTP].[ftpSrcDir] AS [ftpSrcDir], 
-[vw_importSFTP].[ftpSrcArchive] AS [ftpSrcArchive], 
-[vw_importSFTP].[deleteAfterDownload] AS [deleteAfterDownload], 
-[vw_importSFTP].[passive] AS [passive], 
-[vw_importSFTP].[FK_downloadType] AS [FK_downloadType], 
-[vw_importSFTP].[importID] AS [importID], 
-[vw_importSFTP].[reqTracking] AS [reqTracking], 
-[vw_importSFTP].[importOrder] AS [importOrder], 
-[vw_importSFTP].[autoDownload] AS [autoDownload], 
-[vw_importSFTP].[appendTimestamp] AS [appendTimestamp]
-FROM [gImport].[vw_importSFTP] AS [vw_importSFTP]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="SFTPmaps" EntityType="Self.SFTPmaps" Schema="gImport" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="IBSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="IBSEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="vw_importSFTP" EntityType="IBSModel.vw_importSFTP" />
+          <EntitySet Name="SFTPmaps" EntityType="IBSModel.SFTPmap" />
         </EntityContainer>
-        <EntityType Name="vw_importSFTP">
+        <EntityType Name="SFTPmap">
           <Key>
-            <PropertyRef Name="PK" />
-            <PropertyRef Name="gImportID" />
-            <PropertyRef Name="FK_downloadType" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="PK" Type="Int32" Nullable="false" />
-          <Property Name="FolderName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="gImportID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="workingDir" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="pgm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="arguments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="downFileFull" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
-          <Property Name="filePath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="ftpServer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="ftpUser" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="ftpPass" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="ftpSrcDir" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="ftpSrcArchive" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="deleteAfterDownload" Type="Boolean" />
-          <Property Name="passive" Type="Boolean" />
-          <Property Name="FK_downloadType" Type="Int32" Nullable="false" />
-          <Property Name="importID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
-          <Property Name="reqTracking" Type="Boolean" />
-          <Property Name="importOrder" Type="Int32" />
-          <Property Name="autoDownload" Type="Boolean" />
-          <Property Name="appendTimestamp" Type="Boolean" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FolderName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FilePath" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -103,30 +37,12 @@ FROM [gImport].[vw_importSFTP] AS [vw_importSFTP]</DefiningQuery>
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="IBSModelStoreContainer" CdmEntityContainer="IBSEntities">
-          <EntitySetMapping Name="vw_importSFTP">
-            <EntityTypeMapping TypeName="IBSModel.vw_importSFTP">
-              <MappingFragment StoreEntitySet="vw_importSFTP">
-                <ScalarProperty Name="appendTimestamp" ColumnName="appendTimestamp" />
-                <ScalarProperty Name="autoDownload" ColumnName="autoDownload" />
-                <ScalarProperty Name="importOrder" ColumnName="importOrder" />
-                <ScalarProperty Name="reqTracking" ColumnName="reqTracking" />
-                <ScalarProperty Name="importID" ColumnName="importID" />
-                <ScalarProperty Name="FK_downloadType" ColumnName="FK_downloadType" />
-                <ScalarProperty Name="passive" ColumnName="passive" />
-                <ScalarProperty Name="deleteAfterDownload" ColumnName="deleteAfterDownload" />
-                <ScalarProperty Name="ftpSrcArchive" ColumnName="ftpSrcArchive" />
-                <ScalarProperty Name="ftpSrcDir" ColumnName="ftpSrcDir" />
-                <ScalarProperty Name="ftpPass" ColumnName="ftpPass" />
-                <ScalarProperty Name="ftpUser" ColumnName="ftpUser" />
-                <ScalarProperty Name="ftpServer" ColumnName="ftpServer" />
-                <ScalarProperty Name="filePath" ColumnName="filePath" />
-                <ScalarProperty Name="downFileFull" ColumnName="downFileFull" />
-                <ScalarProperty Name="arguments" ColumnName="arguments" />
-                <ScalarProperty Name="pgm" ColumnName="pgm" />
-                <ScalarProperty Name="workingDir" ColumnName="workingDir" />
-                <ScalarProperty Name="gImportID" ColumnName="gImportID" />
+          <EntitySetMapping Name="SFTPmaps">
+            <EntityTypeMapping TypeName="IBSModel.SFTPmap">
+              <MappingFragment StoreEntitySet="SFTPmaps">
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
                 <ScalarProperty Name="FolderName" ColumnName="FolderName" />
-                <ScalarProperty Name="PK" ColumnName="PK" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
