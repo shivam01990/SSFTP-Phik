@@ -1,8 +1,0 @@
-D:\Development Area\SSFTP\SSFTPConsole\SSFTPConsole\bin\Debug\SSFTPConsole.exe.config
-D:\Development Area\SSFTP\SSFTPConsole\SSFTPConsole\bin\Debug\WinSCP.exe
-D:\Development Area\SSFTP\SSFTPConsole\SSFTPConsole\bin\Debug\SSFTPConsole.exe
-D:\Development Area\SSFTP\SSFTPConsole\SSFTPConsole\bin\Debug\SSFTPConsole.pdb
-D:\Development Area\SSFTP\SSFTPConsole\SSFTPConsole\bin\Debug\WinSCPnet.dll
-D:\Development Area\SSFTP\SSFTPConsole\SSFTPConsole\obj\Debug\SSFTPConsole.csprojResolveAssemblyReference.cache
-D:\Development Area\SSFTP\SSFTPConsole\SSFTPConsole\obj\Debug\SSFTPConsole.exe
-D:\Development Area\SSFTP\SSFTPConsole\SSFTPConsole\obj\Debug\SSFTPConsole.pdb

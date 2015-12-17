@@ -1,0 +1,44 @@
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Looping for BESTBUY
+File Path E:\SFTP_FILES\
+File Tranfer successful from /outgoing/orders/BESTBUY//.. to E:\SFTP_FILES\BESTBYDS\..
+Looping for WALMART
+File Path E:\SFTP_FILES\
+File Tranfer successful from /outgoing/orders/WALMART//.. to E:\SFTP_FILES\WALMART\..
+-------Program End----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Looping for BESTBUY
+File Path E:\SFTP_FILES\
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Looping for BESTBUY
+File Path E:\SFTP_FILES\
+File Tranfer successful from /outgoing/orders/BESTBUY//1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders to E:\SFTP_FILES\BESTBYDS\1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders
+File Tranfer successful from /outgoing/orders/BESTBUY//1267945018.md52865CDE932A6D67FD3B8397D40E253BB.neworders to E:\SFTP_FILES\BESTBYDS\1267945018.md52865CDE932A6D67FD3B8397D40E253BB.neworders
+Looping for WALMART
+File Path E:\SFTP_FILES\
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Looping for BESTBUY
+File Path E:\SFTP_FILES\
+File Tranfer successful from /outgoing/orders/BESTBUY//1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders to E:\SFTP_FILES\BESTBYDS\1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders
+File Tranfer successful from /outgoing/orders/BESTBUY//1267945018.md52865CDE932A6D67FD3B8397D40E253BB.neworders to E:\SFTP_FILES\BESTBYDS\1267945018.md52865CDE932A6D67FD3B8397D40E253BB.neworders
+Looping for WALMART
+File Path E:\SFTP_FILES\
+-------Program End----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Looping for BESTBUY
+File Path E:\SFTP_FILES\
+File Tranfer successful from /outgoing/orders/BESTBUY//1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders to E:\SFTP_FILES\BESTBYDS\1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders
+File Tranfer successful from /outgoing/orders/BESTBUY//1267945018.md52865CDE932A6D67FD3B8397D40E253BB.neworders to E:\SFTP_FILES\BESTBYDS\1267945018.md52865CDE932A6D67FD3B8397D40E253BB.neworders
+Looping for WALMART
+File Path E:\SFTP_FILES\
+-------Program End----------
