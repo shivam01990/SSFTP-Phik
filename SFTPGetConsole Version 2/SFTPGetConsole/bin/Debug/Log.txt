@@ -112,3 +112,58 @@ File Path \\SERVER-APP02\ARCUST\IBS\DATA\ORDERS\WALMART\
 File Tranfer successful from /outgoing/orders/WALMART//1274919848.md5381FEE59B231EF49C9947C486BC6A43E.neworders to \\SERVER-APP02\ARCUST\IBS\DATA\ORDERS\WALMART\1274919848.md5381FEE59B231EF49C9947C486BC6A43E.neworders
 File Tranfer successful from /outgoing/orders/WALMART//1274919861.md566035764921E0D2F24B7CFE45DC89830.neworders to \\SERVER-APP02\ARCUST\IBS\DATA\ORDERS\WALMART\1274919861.md566035764921E0D2F24B7CFE45DC89830.neworders
 -------Program End----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Error creating folder '/incoming/BESTBYDS/'. ---> WinSCP.SessionRemoteException: Permission denied.
+Error code: 3
+Error message from server: Failed to create directory /incoming/BESTBYDS: No folder-creation permission for /incoming/BESTBYDS
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 51
+-------Program End----------
+-------Program Ends ----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Error creating folder '/incoming/BESTBYDS/'. ---> WinSCP.SessionRemoteException: Permission denied.
+Error code: 3
+Error message from server: Failed to create directory /incoming/BESTBYDS: No folder-creation permission for /incoming/BESTBYDS
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 51
+-------Program End----------
+-------Program Ends ----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Cannot create remote file '/incoming/1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders'. ---> WinSCP.SessionRemoteException: General failure (server should provide error description).
+Error code: 4
+Error message from server: failed to open file
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 51
+-------Program End----------
+-------Program Ends ----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Cannot create remote file '/incoming/1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders'. ---> WinSCP.SessionRemoteException: General failure (server should provide error description).
+Error code: 4
+Error message from server: failed to open file
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 51
+-------Program End----------
+-------Program Ends ----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Cannot create remote file '/incoming/1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders'. ---> WinSCP.SessionRemoteException: General failure (server should provide error description).
+Error code: 4
+Error message from server: failed to open file
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 52
+-------Program End----------
+-------Program Ends ----------

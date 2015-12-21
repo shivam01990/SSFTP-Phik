@@ -11,5 +11,6 @@
     <Property Name="FolderName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="FilePath" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="FolderNameAlias" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FolderNameShip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

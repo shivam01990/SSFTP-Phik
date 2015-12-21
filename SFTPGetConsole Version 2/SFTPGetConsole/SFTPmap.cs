@@ -18,5 +18,6 @@ namespace SFTPGetConsole
         public string FolderName { get; set; }
         public string FilePath { get; set; }
         public string FolderNameAlias { get; set; }
+        public string FolderNameShip { get; set; }
     }
 }

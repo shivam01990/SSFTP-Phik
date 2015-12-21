@@ -13,6 +13,7 @@
           <Property Name="FolderName" Type="nvarchar(max)" Nullable="false" />
           <Property Name="FilePath" Type="nvarchar(max)" Nullable="false" />
           <Property Name="FolderNameAlias" Type="nvarchar(max)" />
+          <Property Name="FolderNameShip" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="IBSModelStoreContainer">
           <EntitySet Name="SFTPmaps" EntityType="Self.SFTPmaps" Schema="gImport" store:Type="Tables" />
@@ -32,6 +33,7 @@
           <Property Name="FolderName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FilePath" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FolderNameAlias" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FolderNameShip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -42,6 +44,7 @@
           <EntitySetMapping Name="SFTPmaps">
             <EntityTypeMapping TypeName="IBSModel.SFTPmap">
               <MappingFragment StoreEntitySet="SFTPmaps">
+                <ScalarProperty Name="FolderNameShip" ColumnName="FolderNameShip" />
                 <ScalarProperty Name="FolderNameAlias" ColumnName="FolderNameAlias" />
                 <ScalarProperty Name="FilePath" ColumnName="FilePath" />
                 <ScalarProperty Name="FolderName" ColumnName="FolderName" />
