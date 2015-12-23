@@ -54,7 +54,7 @@ namespace SFTPGetConsole
                                     ToUpload += "/";
                                 }
 
-                                string FileToUpload=ToUpload+item.FolderNameAlias;
+                                string FileToUpload = ToUpload + item.FolderNameAlias;
 
                                 if (!FileToUpload.EndsWith("/"))
                                 {
@@ -72,32 +72,57 @@ namespace SFTPGetConsole
                                 {
                                     //if (directory.Files.Where(f => f.Name == Path.GetFileName(file)).Count()>0)
                                     //{
-                                        try
-                                        {
-                                            transferResult = session.PutFiles(file, FileToUpload, true, transferOptions);
-                                            // Throw on any error
-                                            transferResult.Check();
+                                    try
+                                    {
+                                        transferResult = session.PutFiles(file, FileToUpload, true, transferOptions);
+                                        // Throw on any error
+                                        transferResult.Check();
 
-                                            // Print results
-                                            foreach (TransferEventArgs transfer in transferResult.Transfers)
-                                            {
-                                                Console.WriteLine("Upload of {0} succeeded", transfer.FileName);
-                                                Helper.AddtoLogFile("Upload of " + transfer.FileName + " succeeded");
-                                                Helper.AddtoLogFile("Seesion Log Path :" + session.SessionLogPath);
-
-                                            }
-                                        }
-                                        catch (Exception ex)
+                                        // Print results
+                                        foreach (TransferEventArgs transfer in transferResult.Transfers)
                                         {
-                                            Helper.AddtoLogFile("Error:" + ex.ToString());
+                                            Console.WriteLine("Upload of {0} succeeded", transfer.FileName);
+                                            Helper.AddtoLogFile("Upload of " + transfer.FileName + " succeeded");
                                             Helper.AddtoLogFile("Seesion Log Path :" + session.SessionLogPath);
+
                                         }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Helper.AddtoLogFile("Error:" + ex.ToString());
+                                        Helper.AddtoLogFile("Seesion Log Path :" + session.SessionLogPath);
+                                    }
+
+                                    try
+                                    {
+                                        if (!string.IsNullOrEmpty(item.FolderPathArchive))
+                                        {
+                                            
+                                            //Cut File From Source To destination
+                                            string ArchiveFile = item.FolderPathArchive;
+
+                                            if (!ArchiveFile.EndsWith("\\"))
+                                            {
+                                                ArchiveFile += "\\";
+                                            }
+                                            string filename = Path.GetFileName(file);
+                                            ArchiveFile += filename;
+                                            System.IO.File.Move(file, ArchiveFile);
+                                            Console.WriteLine("File Moves from " + file + " to " + ArchiveFile);
+                                            Helper.AddtoLogFile("File Moves from " + file + " to " + ArchiveFile);
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Helper.AddtoLogFile("Error:" + ex.ToString());
+                                    }
+
                                     //}
                                 }
 
-                               
 
-                              
+
+
                             }
                             catch (Exception ex) { Helper.AddtoLogFile("Error:" + ex.ToString()); }
                         }

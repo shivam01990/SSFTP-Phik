@@ -9,6 +9,7 @@
     <Property Name="FilePath" Type="nvarchar(max)" Nullable="false" />
     <Property Name="FolderNameAlias" Type="nvarchar(max)" />
     <Property Name="FolderNameShip" Type="nvarchar(max)" />
+    <Property Name="FolderPathArchive" Type="nvarchar(max)" />
   </EntityType>
   <EntityContainer Name="IBSModelStoreContainer">
     <EntitySet Name="SFTPmaps" EntityType="Self.SFTPmaps" Schema="gImport" store:Type="Tables" />

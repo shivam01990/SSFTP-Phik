@@ -4,6 +4,7 @@
     <EntitySetMapping Name="SFTPmaps">
       <EntityTypeMapping TypeName="IBSModel.SFTPmap">
         <MappingFragment StoreEntitySet="SFTPmaps">
+          <ScalarProperty Name="FolderPathArchive" ColumnName="FolderPathArchive" />
           <ScalarProperty Name="FolderNameShip" ColumnName="FolderNameShip" />
           <ScalarProperty Name="FolderNameAlias" ColumnName="FolderNameAlias" />
           <ScalarProperty Name="FilePath" ColumnName="FilePath" />

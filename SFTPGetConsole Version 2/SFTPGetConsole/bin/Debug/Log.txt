@@ -212,3 +212,65 @@ All File Paths are download.
 -------Program Starts Running----------
 -------Session instance successfully Created.----------
 All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Cannot create remote file '/incoming/BESTBUY/1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders'. ---> WinSCP.SessionRemoteException: General failure (server should provide error description).
+Error code: 4
+Error message from server: failed to open file
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 79
+Seesion Log Path :
+Error:System.IO.IOException: Cannot create a file when that file already exists.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   at System.IO.File.Move(String sourceFileName, String destFileName)
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 99
+Error:WinSCP.SessionRemoteException: Cannot create remote file '/incoming/BESTBUY/1267945018.md52865CDE932A6D67FD3B8397D40E253BB.neworders'. ---> WinSCP.SessionRemoteException: General failure (server should provide error description).
+Error code: 4
+Error message from server: failed to open file
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 79
+Seesion Log Path :
+Error:System.IO.IOException: Cannot create a file when that file already exists.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   at System.IO.File.Move(String sourceFileName, String destFileName)
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 99
+-------Program End----------
+-------Program Ends ----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Cannot create remote file '/incoming/BESTBUY/1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders'. ---> WinSCP.SessionRemoteException: General failure (server should provide error description).
+Error code: 4
+Error message from server: failed to open file
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 79
+Seesion Log Path :
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Cannot create remote file '/incoming/BESTBUY/1267922783.md5B902D242B59F374CC559A8030EF62D4A.neworders'. ---> WinSCP.SessionRemoteException: General failure (server should provide error description).
+Error code: 4
+Error message from server: failed to open file
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 79
+Seesion Log Path :
+Error:WinSCP.SessionRemoteException: Cannot create remote file '/incoming/BESTBUY/1267945018.md52865CDE932A6D67FD3B8397D40E253BB.neworders'. ---> WinSCP.SessionRemoteException: General failure (server should provide error description).
+Error code: 4
+Error message from server: failed to open file
+   --- End of inner exception stack trace ---
+   at WinSCP.OperationResultBase.Check()
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 79
+Seesion Log Path :
+-------Program End----------
+-------Program Ends ----------

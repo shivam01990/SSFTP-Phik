@@ -53,12 +53,12 @@ namespace SFTPGetConsole
                                 foreach (RemoteFileInfo fileInfo in directory.Files)
                                 {
                                     if (!Directory.Exists(LocalPath))
-
+                                    {
                                         if (!File.Exists(LocalPath + fileInfo.Name))
                                         {
                                             Directory.CreateDirectory(LocalPath);
                                         }
-                                    {
+                                    
                                         try
                                         {
                                             if (fileInfo.Name != "..")
