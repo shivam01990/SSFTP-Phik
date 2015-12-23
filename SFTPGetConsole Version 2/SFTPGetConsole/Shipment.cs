@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,20 +51,53 @@ namespace SFTPGetConsole
 
                                 if (!ToUpload.EndsWith("/"))
                                 {
-                                    item.FolderNameShip += "/";
+                                    ToUpload += "/";
                                 }
 
-                                transferResult = session.PutFiles(item.FolderNameShip + "*", ToUpload+item.FolderNameAlias, false, transferOptions);
-                                // Throw on any error
-                                transferResult.Check();
+                                string FileToUpload=ToUpload+item.FolderNameAlias;
 
-                                // Print results
-                                foreach (TransferEventArgs transfer in transferResult.Transfers)
+                                if (!FileToUpload.EndsWith("/"))
                                 {
-                                    Console.WriteLine("Upload of {0} succeeded", transfer.FileName);
-                                    Helper.AddtoLogFile("Upload of " + transfer.FileName + " succeeded");
-
+                                    FileToUpload += "/";
                                 }
+                                RemoteDirectoryInfo directory = null;
+                                try
+                                {
+                                    directory = session.ListDirectory(FileToUpload);
+                                }
+                                catch { }
+                                List<string> filePaths = Directory.GetFiles(item.FolderNameShip).ToList();
+
+                                foreach (string file in filePaths)
+                                {
+                                    //if (directory.Files.Where(f => f.Name == Path.GetFileName(file)).Count()>0)
+                                    //{
+                                        try
+                                        {
+                                            transferResult = session.PutFiles(file, FileToUpload, true, transferOptions);
+                                            // Throw on any error
+                                            transferResult.Check();
+
+                                            // Print results
+                                            foreach (TransferEventArgs transfer in transferResult.Transfers)
+                                            {
+                                                Console.WriteLine("Upload of {0} succeeded", transfer.FileName);
+                                                Helper.AddtoLogFile("Upload of " + transfer.FileName + " succeeded");
+                                                Helper.AddtoLogFile("Seesion Log Path :" + session.SessionLogPath);
+
+                                            }
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            Helper.AddtoLogFile("Error:" + ex.ToString());
+                                            Helper.AddtoLogFile("Seesion Log Path :" + session.SessionLogPath);
+                                        }
+                                    //}
+                                }
+
+                               
+
+                              
                             }
                             catch (Exception ex) { Helper.AddtoLogFile("Error:" + ex.ToString()); }
                         }

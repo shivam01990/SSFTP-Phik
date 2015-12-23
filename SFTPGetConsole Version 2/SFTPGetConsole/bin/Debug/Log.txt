@@ -167,3 +167,48 @@ Error message from server: failed to open file
    at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 52
 -------Program End----------
 -------Program Ends ----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+Error:WinSCP.SessionRemoteException: Error listing directory '/incoming/BESTBUY'. ---> WinSCP.SessionRemoteException: Permission denied.
+Error code: 3
+Error message from server: permission denied
+   --- End of inner exception stack trace ---
+   at WinSCP.SessionLogReader.Read(LogReadFlags flags)
+   at WinSCP.ElementLogReader.Read(LogReadFlags flags)
+   at WinSCP.SessionElementLogReader.Read(LogReadFlags flags)
+   at WinSCP.ElementLogReader.Read(LogReadFlags flags)
+   at WinSCP.CustomLogReader.TryWaitForNonEmptyElement(String localName, LogReadFlags flags)
+   at WinSCP.CustomLogReader.WaitForNonEmptyElement(String localName, LogReadFlags flags)
+   at WinSCP.CustomLogReader.WaitForNonEmptyElementAndCreateLogReader(String localName, LogReadFlags flags)
+   at WinSCP.Session.ListDirectory(String path)
+   at SFTPGetConsole.Shipment.RunShipment() in d:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\Shipment.cs:line 59
+-------Program End----------
+-------Program Ends ----------
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.
+-------Program Starts Running----------
+-------Session instance successfully Created.----------
+All File Paths are download.

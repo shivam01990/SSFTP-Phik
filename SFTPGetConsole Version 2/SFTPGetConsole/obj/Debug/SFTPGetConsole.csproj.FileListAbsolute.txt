@@ -37,4 +37,3 @@ D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\bin
 D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\bin\Debug\EntityFramework.dll
 D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\bin\Debug\WinSCPnet.dll
 D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\bin\Debug\EntityFramework.xml
-D:\Development Area\SSFTP\SSFTP-Phik\SFTPGetConsole Version 2\SFTPGetConsole\obj\Debug\SFTPGetConsole.csprojResolveAssemblyReference.cache
